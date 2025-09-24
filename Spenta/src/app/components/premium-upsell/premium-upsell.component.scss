@@ -1,0 +1,84 @@
+:host {
+  display: block;
+  background: linear-gradient(180deg, var(--c-primary) 0%, var(--c-accent) 100%);
+  min-height: calc(100vh - 70px);
+  color: #fff;
+}
+
+.premium-container {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.header i {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.features-list {
+  margin: 2.5rem 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item i {
+  color: var(--c-status-success);
+  font-size: 1.5rem;
+}
+
+.pricing-card {
+  background-color: var(--c-bg-surface);
+  color: var(--c-text-primary);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-xl);
+}
+
+.pricing-card h2 {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--c-text-title);
+}
+
+.period {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--c-text-secondary);
+}
+
+.pricing-card p {
+  color: var(--c-text-secondary);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.cta-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--c-primary);
+  color: var(--c-text-on-primary);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}

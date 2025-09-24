@@ -1,0 +1,65 @@
+.summary-card {
+  background: linear-gradient(45deg, var(--c-primary), var(--c-accent));
+  color: var(--c-text-on-primary);
+  text-align: center;
+}
+
+.summary-card h2 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.summary-card p, .summary-card small {
+  opacity: 0.9;
+}
+
+.subscription-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-text-primary);
+}
+
+.details p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--c-text-secondary);
+}
+
+.next-payment {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.next-payment p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--c-text-tertiary);
+}
+
+.next-payment span {
+  font-weight: 600;
+  color: var(--c-text-primary);
+}

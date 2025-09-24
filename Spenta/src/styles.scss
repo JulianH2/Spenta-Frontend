@@ -1,0 +1,40 @@
+@use 'theme/theme' as theme;
+
+:root {
+  @include theme.define-spenta-theme(theme.$spenta-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include theme.define-spenta-theme(theme.$spenta-dark);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: var(--c-bg-body);
+  color: var(--c-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  padding: 1.5rem 1rem 6rem 1rem;
+}
+
+.page-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--c-text-title);
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background-color: var(--c-bg-surface);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--c-border-primary);
+}

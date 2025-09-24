@@ -1,0 +1,109 @@
+@use "sass:map";
+
+$spenta-light: (
+  primary: #188C6B,
+  primary-hover: #0F6651,
+  accent: #00095C,
+  accent-hover: #00073F,
+  text-primary: #212529,
+  text-secondary: #6c757d,
+  text-tertiary: #8a95a1,
+  text-inverted: #ffffff,
+  text-title: #212529,
+  text-on-primary: #ffffff,
+  text-on-accent: #ffffff,
+  text-on-status: #ffffff,
+  text-link: #188C6B,
+  text-link-hover: #0F6651,
+  icon-default: #6c757d,
+  icon-muted: #8a95a1,
+  icon-interactive: #188C6B,
+  icon-on-primary: #ffffff,
+  icon-on-accent: #ffffff,
+  bg-body: #F2F2F2,
+  bg-surface: #ffffff,
+  bg-surface-secondary: #f8f9fa,
+  bg-surface-hover: #e9ecef,
+  bg-surface-active: #dde2e6,
+  border-primary: #dee2e6,
+  border-secondary: #ced4da,
+  border-interactive: #188C6B,
+  status-success: #00BFA6,
+  status-warning: #FFC857,
+  status-danger: #FF6B6B,
+  status-info: #00095C,
+  shadow-color: rgba(0, 0, 0, 0.1)
+);
+
+$spenta-dark: (
+  primary: #188C6B,
+  primary-hover: #0F6651,
+  accent: #00095C,
+  accent-hover: #00073F,
+  text-primary: #F5F5F5,
+  text-secondary: #aaaaaa,
+  text-tertiary: #717171,
+  text-inverted: #121212,
+  text-title: #ffffff,
+  text-on-primary: #ffffff,
+  text-on-accent: #ffffff,
+  text-on-status: #ffffff,
+  text-link: #00BFA6,
+  text-link-hover: #00A88F,
+  icon-default: #aaaaaa,
+  icon-muted: #717171,
+  icon-interactive: #00BFA6,
+  icon-on-primary: #ffffff,
+  icon-on-accent: #ffffff,
+  bg-body: #121212,
+  bg-surface: #1e1e1e,
+  bg-surface-secondary: #232323,
+  bg-surface-hover: #2c2c2c,
+  bg-surface-active: #383838,
+  border-primary: #303030,
+  border-secondary: #444444,
+  border-interactive: #00BFA6,
+  status-success: #00BFA6,
+  status-warning: #FFC857,
+  status-danger: #FF6B6B,
+  status-info: #00095C,
+  shadow-color: rgba(0, 0, 0, 0.4)
+);
+
+@mixin define-spenta-theme($theme) {
+  --c-primary: #{map.get($theme, primary)};
+  --c-primary-hover: #{map.get($theme, primary-hover)};
+  --c-accent: #{map.get($theme, accent)};
+  --c-accent-hover: #{map.get($theme, accent-hover)};
+  --c-text-primary: #{map.get($theme, text-primary)};
+  --c-text-secondary: #{map.get($theme, text-secondary)};
+  --c-text-tertiary: #{map.get($theme, text-tertiary)};
+  --c-text-inverted: #{map.get($theme, text-inverted)};
+  --c-text-title: #{map.get($theme, text-title)};
+  --c-text-on-primary: #{map.get($theme, text-on-primary)};
+  --c-text-on-accent: #{map.get($theme, text-on-accent)};
+  --c-text-on-status: #{map.get($theme, text-on-status)};
+  --c-text-link: #{map.get($theme, text-link)};
+  --c-text-link-hover: #{map.get($theme, text-link-hover)};
+  --c-icon-default: #{map.get($theme, icon-default)};
+  --c-icon-muted: #{map.get($theme, icon-muted)};
+  --c-icon-interactive: #{map.get($theme, icon-interactive)};
+  --c-icon-on-primary: #{map.get($theme, icon-on-primary)};
+  --c-icon-on-accent: #{map.get($theme, icon-on-accent)};
+  --c-bg-body: #{map.get($theme, bg-body)};
+  --c-bg-surface: #{map.get($theme, bg-surface)};
+  --c-bg-surface-secondary: #{map.get($theme, bg-surface-secondary)};
+  --c-bg-surface-hover: #{map.get($theme, bg-surface-hover)};
+  --c-bg-surface-active: #{map.get($theme, bg-surface-active)};
+  --c-border-primary: #{map.get($theme, border-primary)};
+  --c-border-secondary: #{map.get($theme, border-secondary)};
+  --c-border-interactive: #{map.get($theme, border-interactive)};
+  --c-status-success: #{map.get($theme, status-success)};
+  --c-status-warning: #{map.get($theme, status-warning)};
+  --c-status-danger: #{map.get($theme, status-danger)};
+  --c-status-info: #{map.get($theme, status-info)};
+  --shadow-sm: 0 1px 2px 0 #{map.get($theme, shadow-color)};
+  --shadow-md: 0 4px 6px -1px #{map.get($theme, shadow-color)}, 0 2px 4px -2px #{map.get($theme, shadow-color)};
+  --shadow-lg: 0 10px 15px -3px #{map.get($theme, shadow-color)}, 0 4px 6px -4px #{map.get($theme, shadow-color)};
+  --shadow-xl: 0 20px 25px -5px #{map.get($theme, shadow-color)}, 0 8px 10px -6px #{map.get($theme, shadow-color)};
+}

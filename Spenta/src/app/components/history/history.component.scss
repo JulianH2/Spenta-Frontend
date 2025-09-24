@@ -1,0 +1,65 @@
+.date-group {
+  margin-bottom: 2rem;
+}
+
+.date-header {
+  font-weight: 600;
+  color: var(--c-text-secondary);
+  margin-bottom: 0.75rem;
+  padding-left: 0.25rem;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.transaction-item i {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--c-bg-surface-secondary);
+}
+
+.transaction-item i.expense {
+  color: var(--c-status-danger);
+}
+
+.transaction-item i.income {
+  color: var(--c-status-success);
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-text-primary);
+}
+
+.details p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--c-text-secondary);
+}
+
+.amount {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.amount.expense {
+  color: var(--c-status-danger);
+}
+
+.amount.income {
+  color: var(--c-status-success);
+}

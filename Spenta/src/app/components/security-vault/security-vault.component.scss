@@ -1,0 +1,49 @@
+.security-status {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--c-bg-surface-secondary);
+}
+
+.security-status i {
+  font-size: 3rem;
+  color: var(--c-status-success);
+  margin-bottom: 0.5rem;
+}
+
+.security-status h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--c-text-primary);
+}
+
+.security-section {
+  margin-top: 2rem;
+}
+
+.security-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.info p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.9rem;
+  color: var(--c-text-secondary);
+}
+
+.security-item > i {
+  font-size: 1.75rem;
+  color: var(--c-text-tertiary);
+}
+
+.security-item > i.enabled {
+  color: var(--c-status-success);
+}
