@@ -1,0 +1,21 @@
+<app-header title="Centinela" [showBackButton]="true"></app-header>
+<div class="container">
+  <p class="description">
+    Ingresa los datos de la transferencia SPEI o pago para analizar su nivel de riesgo antes de realizarla.
+  </p>
+  <form>
+    <div class="form-group">
+      <label for="recipient">CLABE o Número de Tarjeta</label>
+      <input type="text" id="recipient">
+    </div>
+    <div class="form-group">
+      <label for="amount">Monto</label>
+      <input type="number" id="amount">
+    </div>
+    <div class="form-group">
+      <label for="concept">Concepto</label>
+      <input type="text" id="concept">
+    </div>
+    <button type="submit" class="btn btn-primary">Analizar Transacción</button>
+  </form>
+</div>

@@ -1,0 +1,25 @@
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.details { flex-grow: 1; }
+.details h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.amount { font-weight: 600; }
+.progress-bar {
+  height: 8px;
+  background-color: var(--c-bg-surface-secondary);
+  border-radius: 4px;
+}
+.progress {
+  height: 100%;
+  background-color: var(--c-primary);
+  border-radius: 4px;
+}

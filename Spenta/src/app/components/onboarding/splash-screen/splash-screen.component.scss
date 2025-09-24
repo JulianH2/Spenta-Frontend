@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--c-bg-body);
+}
+.splash-container {
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: 3rem;
+  color: var(--c-primary);
+  margin: 0;
+}
+p {
+  font-size: 1.1rem;
+  color: var(--c-text-secondary);
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

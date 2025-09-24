@@ -1,0 +1,20 @@
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.status-indicator {
+  width: 10px;
+  height: 50px;
+  border-radius: 5px;
+}
+.status-indicator.success { background-color: var(--c-status-success); }
+.status-indicator.danger { background-color: var(--c-status-danger); }
+
+.details { flex-grow: 1; }
+.details h3 { margin: 0; font-size: 1rem; }
+.details p { margin: 0.25rem 0 0 0; color: var(--c-text-secondary); }
+
+.status-text { font-weight: 600; }
+.status-text.success { color: var(--c-status-success); }
+.status-text.danger { color: var(--c-status-danger); }

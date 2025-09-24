@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--c-bg-surface);
+  border-bottom: 1px solid var(--c-border-primary);
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--c-text-title);
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--c-icon-default);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+// Placeholder to balance the title when only one button is present
+.main-header .btn-icon:first-child:not(:last-child) {
+  margin-right: auto;
+}
+.main-header .btn-icon:last-child:not(:first-child) {
+  margin-left: auto;
+}

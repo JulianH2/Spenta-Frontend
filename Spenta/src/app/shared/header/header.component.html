@@ -1,0 +1,11 @@
+<header class="main-header">
+  <button *ngIf="showBackButton" class="btn-icon" (click)="goBack()">
+    <i class="bi bi-arrow-left"></i>
+  </button>
+
+  <h1 class="title">{{ title }}</h1>
+
+  <button *ngIf="showNotifications" class="btn-icon" (click)="goToNotifications()">
+    <i class="bi bi-bell"></i>
+  </button>
+</header>

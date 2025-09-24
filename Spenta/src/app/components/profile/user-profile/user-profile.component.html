@@ -4,7 +4,7 @@
     <h2>Jose Julian Hernandez Hernandez</h2>
     <p>julian.hdz&#64;email.com</p>
   </div>
-  
+
   <div class="menu-options">
     <a routerLink="/app/settings" class="menu-item card">
       <i class="bi bi-gear-fill"></i>
@@ -21,10 +21,11 @@
       <span>Spenta Premium</span>
       <i class="bi bi-chevron-right"></i>
     </a>
-     <a class="menu-item card">
+    <button (click)="logout()" class="menu-item card">
       <i class="bi bi-box-arrow-right"></i>
       <span>Cerrar Sesión</span>
       <i class="bi bi-chevron-right"></i>
-    </a>
+    </button>
+
   </div>
 </div>
