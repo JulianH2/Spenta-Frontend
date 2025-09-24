@@ -1,6 +1,6 @@
-<div class="container">
-  <h1 class="page-title">Mercado</h1>
+<app-header title="Asesor"></app-header>
 
+<div class="container">
   <div class="card market-card">
     <h2>Dólar (USD a MXN)</h2>
     <p class="rate">$18.25</p>
@@ -19,12 +19,8 @@
     </div>
   </div>
 
-  <div class="card market-card">
-    <h2>Inflación (Anual)</h2>
-    <p class="rate">4.5%</p>
-    <div class="change neutral">
-      <i class="bi bi-arrow-right"></i>
-      <span>Estable</span>
-    </div>
-  </div>
+  <a routerLink="/app/chat" class="chat-fab">
+    <i class="bi bi-chat-dots-fill"></i>
+    <span>Chatear con Asesor IA</span>
+  </a>
 </div>

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { TabBarComponent } from '../../shared/tab-bar/tab-bar.component';
+import { SidebarComponent } from '../../shared/sidebar/sidebar.component'; // Importado
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [RouterModule, TabBarComponent],
+  imports: [RouterModule, TabBarComponent, SidebarComponent], // Añadido
   templateUrl: './main-layout.component.html',
   styleUrls: ['./main-layout.component.scss']
 })

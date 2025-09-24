@@ -1,0 +1,131 @@
+.balance-card {
+  background: linear-gradient(45deg, var(--c-primary), var(--c-accent));
+  color: var(--c-text-on-primary);
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-lg);
+
+  p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    margin: 0.5rem 0 0 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .currency {
+    font-size: 1.25rem;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.action-item {
+  text-decoration: none;
+  color: var(--c-text-secondary);
+
+  .icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: var(--c-bg-surface);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem auto;
+    font-size: 28px;
+    color: var(--c-primary);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--c-border-primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+
+  span {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--c-text-title);
+  margin-bottom: 1rem;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--c-bg-surface);
+  border-radius: 12px;
+  border: 1px solid var(--c-border-primary);
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--c-bg-surface-secondary);
+    font-size: 20px;
+    color: var(--c-text-secondary);
+  }
+
+  .details {
+    flex-grow: 1;
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--c-text-primary);
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: var(--c-text-secondary);
+    }
+  }
+
+  .amount {
+    font-weight: 600;
+    font-size: 1rem;
+
+    &.income {
+      color: var(--c-status-success);
+    }
+    &.expense {
+      color: var(--c-status-danger);
+    }
+  }
+}

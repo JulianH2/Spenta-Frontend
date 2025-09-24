@@ -13,7 +13,7 @@
   justify-content: space-around;
   align-items: center;
   border-top: 1px solid var(--c-border-primary);
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
   z-index: 1000;
 }
 
@@ -23,15 +23,17 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--c-text-secondary);
+  color: var(--c-text-tertiary);
   flex-grow: 1;
-  padding: 8px 0;
+  height: 100%;
+  gap: 4px;
+  position: relative;
   transition: color 0.2s ease-in-out;
 }
 
 .tab-item i {
   font-size: 22px;
-  margin-bottom: 4px;
+  transition: transform 0.2s ease;
 }
 
 .tab-item span {
@@ -41,4 +43,15 @@
 
 .tab-item.active {
   color: var(--c-primary);
+}
+
+// Efecto visual para el ítem activo
+.tab-item.active::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  width: 32px;
+  height: 4px;
+  background-color: var(--c-primary);
+  border-radius: 2px;
 }

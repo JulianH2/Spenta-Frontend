@@ -1,0 +1,14 @@
+<app-header title="Notificaciones" [showBackButton]="true"></app-header>
+
+<div class="container">
+  <div *ngFor="let notif of notifications" class="notification-item">
+    <div class="icon-container" [ngClass]="notif.color">
+      <i [ngClass]="notif.icon"></i>
+    </div>
+    <div class="details">
+      <h3>{{ notif.title }}</h3>
+      <p>{{ notif.description }}</p>
+      <small>{{ notif.time }}</small>
+    </div>
+  </div>
+</div>

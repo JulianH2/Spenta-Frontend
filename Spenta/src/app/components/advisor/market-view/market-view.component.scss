@@ -1,3 +1,7 @@
+.container {
+  padding-bottom: 8rem;
+}
+
 .market-card {
   padding: 1.5rem;
   text-align: center;
@@ -35,3 +39,46 @@
 .change.neutral {
   color: var(--c-text-secondary);
 }
+
+.chat-fab {
+  position: fixed;
+  bottom: 85px;
+  right: 20px;
+  transform: translateX(-70px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--c-accent);
+  color: var(--c-text-on-accent);
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.chat-fab:hover {
+  transform: translateX(-70px) scale(1.05);
+}
+
+.chat-fab i {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-bottom: 1.5rem;
+  }
+  .chat-fab {
+    bottom: 30px;
+    right: 30px;
+    transform: none;
+  }
+  .chat-fab:hover {
+    transform: scale(1.05);
+  }
+}
+

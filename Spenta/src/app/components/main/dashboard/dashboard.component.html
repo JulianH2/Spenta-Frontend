@@ -1,0 +1,52 @@
+<app-header [title]="'Hola, ' + userName" [showNotifications]="true"></app-header>
+
+<div class="container">
+  <div class="balance-card">
+    <p>Balance Total</p>
+    <h2>$85,450.50 <span class="currency">MXN</span></h2>
+  </div>
+
+  <div class="quick-actions">
+    <a routerLink="/app/sentinel" class="action-item">
+      <div class="icon-wrapper">
+        <i class="bi bi-shield-check"></i>
+      </div>
+      <span>Centinela</span>
+    </a>
+    <a routerLink="/app/expenses" class="action-item">
+      <div class="icon-wrapper">
+        <i class="bi bi-pie-chart-fill"></i>
+      </div>
+      <span>Gastos</span>
+    </a>
+    <a routerLink="/app/savings-goals" class="action-item">
+      <div class="icon-wrapper">
+        <i class="bi bi-gem"></i>
+      </div>
+      <span>Metas</span>
+    </a>
+    <a routerLink="/app/history" class="action-item">
+      <div class="icon-wrapper">
+        <i class="bi bi-clock-history"></i>
+      </div>
+      <span>Historial</span>
+    </a>
+  </div>
+
+  <h3 class="section-title">Actividad Reciente</h3>
+
+  <div class="transactions-list">
+    <div *ngFor="let tx of recentTransactions" class="transaction-item">
+      <div class="icon">
+        <i [ngClass]="tx.icon"></i>
+      </div>
+      <div class="details">
+        <h3>{{ tx.name }}</h3>
+        <p>{{ tx.category }}</p>
+      </div>
+      <div class="amount" [ngClass]="tx.type">
+        {{ tx.amount | currency:'MXN':'symbol-narrow':'1.2-2' }}
+      </div>
+    </div>
+  </div>
+</div>

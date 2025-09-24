@@ -8,4 +8,5 @@ import { CommonModule } from '@angular/common';
   templateUrl: './ai-chat.component.html',
   styleUrls: ['./ai-chat.component.scss']
 })
-export class AiChatComponent { }
+export class AiChatComponent {}
+
