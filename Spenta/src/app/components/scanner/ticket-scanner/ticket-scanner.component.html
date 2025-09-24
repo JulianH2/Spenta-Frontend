@@ -1,6 +1,7 @@
+<!-- ticket-scanner.component.html - Versión mejorada -->
 <div class="scanner-container">
   <div class="header">
-    <button class="close-btn" (click)="closeScanner()">
+    <button class="close-btn" (click)="closeScanner()" aria-label="Cerrar escáner">
       <i class="bi bi-x-lg"></i>
     </button>
     <h2>Escanear Ticket</h2>
@@ -10,19 +11,53 @@
     <div class="placeholder-text">
       <i class="bi bi-camera-fill"></i>
       <p>Vista de la cámara</p>
+      <small>Coloca el código QR dentro del marco</small>
     </div>
-    <div class="scan-frame"></div>
+    
+    <div class="scan-frame">
+      <!-- Esquinas decorativas -->
+      <div class="corner top-left"></div>
+      <div class="corner top-right"></div>
+      <div class="corner bottom-left"></div>
+      <div class="corner bottom-right"></div>
+    </div>
+    
+    <!-- Indicador de estado -->
+    <div class="scan-status" [ngClass]="scanStatus">
+      <i class="bi" [class]="getStatusIcon()"></i>
+      <span>{{ getStatusText() }}</span>
+    </div>
   </div>
 
   <div class="controls">
-    <button class="flash-btn">
-      <i class="bi bi-lightning-fill"></i>
+    <button class="flash-btn" 
+            (click)="toggleFlash()" 
+            [class.active]="isFlashOn"
+            aria-label="Toggle flash">
+      <i class="bi" [class]="isFlashOn ? 'bi-lightning-fill' : 'bi-lightning'"></i>
     </button>
-    <button class="capture-btn">
-      <div class="inner-circle"></div>
+    
+    <button class="capture-btn" 
+            (click)="captureImage()"
+            [disabled]="isProcessing"
+            aria-label="Capturar imagen">
+      <div class="inner-circle">
+        <div class="processing-indicator" *ngIf="isProcessing"></div>
+      </div>
     </button>
-    <button class="gallery-btn">
+    
+    <button class="gallery-btn" 
+            (click)="openGallery()"
+            aria-label="Abrir galería">
       <i class="bi bi-image"></i>
     </button>
+  </div>
+
+  <!-- Overlay de carga -->
+  <div class="loading-overlay" *ngIf="isProcessing">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Procesando imagen...</p>
+    </div>
   </div>
 </div>

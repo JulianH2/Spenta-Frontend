@@ -15,6 +15,6 @@ export class MainLayoutComponent {
   constructor(private router: Router) {}
 
   openTicketScanner(): void {
-    this.router.navigate(['/app/scanner']);
+    this.router.navigate(['/scanner']);
   }
 }
