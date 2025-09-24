@@ -1,0 +1,13 @@
+// Estilos para la nueva cabecera
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header-button {
+  color: var(--c-primary);
+  font-size: 1.75rem;
+  text-decoration: none;
+}

@@ -1,75 +1,52 @@
 :host {
   display: flex;
   flex-direction: column;
-  width: 260px;
-  height: 100vh;
   background-color: var(--c-bg-surface);
-  border-right: 1px solid var(--c-border-primary);
-  padding: 1.5rem 1rem;
-  box-sizing: border-box;
+  height: 100%;
 }
 
-.sidebar-container {
+.sidebar-nav {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 .sidebar-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0 0.5rem 1.5rem 0.5rem;
-  margin-bottom: 1.5rem;
+  padding: 1.5rem;
   border-bottom: 1px solid var(--c-border-primary);
-
-  .logo-icon {
-    font-size: 2rem;
-    color: var(--c-primary);
-  }
-  .app-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0;
-    color: var(--c-text-title);
-  }
 }
 
-.navigation-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--c-text-title);
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
   flex-grow: 1;
 }
 
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
+.nav-item a {
+  display: block;
+  padding: 1rem 1.5rem;
   color: var(--c-text-secondary);
+  text-decoration: none;
   font-weight: 500;
-  transition: background-color 0.2s ease, color 0.2s ease;
-
-  i {
-    font-size: 1.25rem;
-    width: 24px;
-    text-align: center;
-  }
-
-  &:hover {
-    background-color: var(--c-bg-surface-hover);
-    color: var(--c-text-primary);
-  }
-
-  &.active {
-    background-color: var(--c-primary);
-    color: var(--c-text-on-primary);
-  }
+  transition: background-color 0.2s, color 0.2s;
+  border-left: 3px solid transparent;
 }
 
-.sidebar-footer {
-  margin-top: auto;
+.nav-item a:hover {
+  background-color: var(--c-bg-surface-hover);
+  color: var(--c-text-primary);
+}
+
+.nav-item a.active {
+  color: var(--c-primary);
+  font-weight: 600;
+  background-color: var(--c-bg-surface-secondary);
+  border-left: 3px solid var(--c-primary);
 }

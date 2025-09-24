@@ -4,7 +4,6 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-    // --- Flujo de Autenticación (Fuera de la App principal) ---
     {
         path: '',
         component: AuthLayoutComponent,
@@ -16,8 +15,6 @@ export const routes: Routes = [
             { path: '', redirectTo: 'splash', pathMatch: 'full' }
         ]
     },
-
-    // --- Aplicación Principal (Después de Iniciar Sesión) ---
     {
         path: 'app',
         component: MainLayoutComponent,

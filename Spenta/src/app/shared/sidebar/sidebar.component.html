@@ -1,32 +1,22 @@
-<aside class="sidebar-container">
+<nav class="sidebar-nav">
   <div class="sidebar-header">
-    <i class="bi bi-shield-shaded logo-icon"></i>
-    <h1 class="app-name">{{ appName }}</h1>
+    <span class="logo">Spenta</span>
   </div>
-
-  <nav class="navigation-menu">
-    <a routerLink="/app/dashboard" routerLinkActive="active" class="nav-item">
-      <i class="bi bi-grid-1x2-fill"></i>
-      <span>Dashboard</span>
-    </a>
-    <a routerLink="/app/subscriptions" routerLinkActive="active" class="nav-item">
-      <i class="bi bi-calendar-check-fill"></i>
-      <span>Suscripciones</span>
-    </a>
-    <a routerLink="/app/advisor" routerLinkActive="active" class="nav-item">
-      <i class="bi bi-graph-up-arrow"></i>
-      <span>Asesor</span>
-    </a>
-    <a routerLink="/app/profile" routerLinkActive="active" class="nav-item">
-      <i class="bi bi-person-fill"></i>
-      <span>Perfil</span>
-    </a>
-  </nav>
-
-  <div class="sidebar-footer">
-    <a routerLink="/app/settings" routerLinkActive="active" class="nav-item">
-      <i class="bi bi-gear-fill"></i>
-      <span>Ajustes</span>
-    </a>
-  </div>
-</aside>
+  <ul class="nav-list">
+    <li class="nav-item">
+      <a routerLink="/app/dashboard" routerLinkActive="active">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/app/finance/history" routerLinkActive="active">Historial Financiero</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/app/sentinel" routerLinkActive="active">Centinela</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/app/advisor/chat" routerLinkActive="active">Asesor IA</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/app/profile" routerLinkActive="active">Mi Perfil</a>
+    </li>
+  </ul>
+</nav>

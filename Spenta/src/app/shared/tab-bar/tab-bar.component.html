@@ -1,14 +1,18 @@
 <nav class="tab-bar">
-  <a routerLink="/app/dashboard" routerLinkActive="active" class="tab-item">
-    <i class="bi bi-grid-1x2-fill"></i>
+  <a routerLink="/app/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="tab-item">
+    <i class="bi bi-house-door-fill"></i>
     <span>Dashboard</span>
   </a>
-  <a routerLink="/app/subscriptions" routerLinkActive="active" class="tab-item">
-    <i class="bi bi-calendar-check-fill"></i>
-    <span>Suscripciones</span>
+  <a routerLink="/app/finance/history" routerLinkActive="active" class="tab-item">
+    <i class="bi bi-clock-history"></i>
+    <span>Historial</span>
   </a>
-  <a routerLink="/app/advisor" routerLinkActive="active" class="tab-item">
-    <i class="bi bi-graph-up-arrow"></i>
+  <a routerLink="/app/sentinel" routerLinkActive="active" class="tab-item">
+    <i class="bi bi-shield-check"></i>
+    <span>Centinela</span>
+  </a>
+  <a routerLink="/app/advisor/chat" routerLinkActive="active" class="tab-item">
+    <i class="bi bi-chat-dots-fill"></i>
     <span>Asesor</span>
   </a>
   <a routerLink="/app/profile" routerLinkActive="active" class="tab-item">

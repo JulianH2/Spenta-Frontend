@@ -33,7 +33,6 @@
 
 .tab-item i {
   font-size: 22px;
-  transition: transform 0.2s ease;
 }
 
 .tab-item span {
@@ -45,7 +44,6 @@
   color: var(--c-primary);
 }
 
-// Efecto visual para el ítem activo
 .tab-item.active::before {
   content: '';
   position: absolute;
